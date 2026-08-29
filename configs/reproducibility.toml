@@ -1,0 +1,12 @@
+specification_version = "0.5.0"
+specification_sha256 = "10b1e4c89b7c1b92ce785269fdf185f4e0b29990bfa82ceb45b6f5042358021b"
+rubric_version = "hm_v0.5.0"
+judge_schema_version = "judge_output_v0.5.0"
+relation_registry_version = "relations_v0.4.1"
+default_random_seed = 20260401
+
+[immutability]
+raw_requests = true
+raw_responses = true
+raw_extractions = true
+derived_measurements_versioned = true
