@@ -1,0 +1,107 @@
+{
+  "created_at_utc": "2026-07-03T04:22:31.890748+00:00",
+  "dry_run": true,
+  "force": false,
+  "input": "factual_targets.stage0.source_backed.json",
+  "known_warning_count": 1,
+  "source_count": 16,
+  "source_dir": "factual_sources_stage0",
+  "sources": {
+    "BIS_DEC_2024_SEMICONDUCTOR_CONTROLS": {
+      "archived_path": "factual_sources_stage0/BIS_DEC_2024_SEMICONDUCTOR_CONTROLS.bin",
+      "source_id": "BIS_DEC_2024_SEMICONDUCTOR_CONTROLS",
+      "status": "dry_run",
+      "url": "https://www.bis.gov/press-release/commerce-strengthens-export-controls-restrict-chinas-capability-produce-advanced-semiconductors-military"
+    },
+    "BLS_CPS_ANNUAL_AVERAGES_TABLE_1_2024": {
+      "archived_path": "factual_sources_stage0/BLS_CPS_ANNUAL_AVERAGES_TABLE_1_2024.pdf",
+      "source_id": "BLS_CPS_ANNUAL_AVERAGES_TABLE_1_2024",
+      "status": "dry_run",
+      "url": "https://www.bls.gov/cps/cpsa2024.pdf"
+    },
+    "EU_JRC_ALGORITHMIC_MANAGEMENT": {
+      "archived_path": "factual_sources_stage0/EU_JRC_ALGORITHMIC_MANAGEMENT.bin",
+      "source_id": "EU_JRC_ALGORITHMIC_MANAGEMENT",
+      "status": "dry_run",
+      "url": "https://publications.jrc.ec.europa.eu/repository/handle/JRC143072"
+    },
+    "FRED_DPCERE1Q156NBEA": {
+      "archived_path": "factual_sources_stage0/FRED_DPCERE1Q156NBEA.csv",
+      "source_id": "FRED_DPCERE1Q156NBEA",
+      "status": "dry_run",
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DPCERE1Q156NBEA"
+    },
+    "FRED_W270RE1A156NBEA": {
+      "archived_path": "factual_sources_stage0/FRED_W270RE1A156NBEA.csv",
+      "source_id": "FRED_W270RE1A156NBEA",
+      "status": "dry_run",
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=W270RE1A156NBEA"
+    },
+    "GOOGLE_DATA_CENTER_LOCATIONS": {
+      "archived_path": "factual_sources_stage0/GOOGLE_DATA_CENTER_LOCATIONS.bin",
+      "source_id": "GOOGLE_DATA_CENTER_LOCATIONS",
+      "status": "dry_run",
+      "url": "https://datacenters.google/locations"
+    },
+    "HUD_AHAR_2024_PART_1": {
+      "archived_path": "factual_sources_stage0/HUD_AHAR_2024_PART_1.pdf",
+      "source_id": "HUD_AHAR_2024_PART_1",
+      "status": "dry_run",
+      "url": "https://www.huduser.gov/portal/sites/default/files/pdf/2024-AHAR-Part-1.pdf"
+    },
+    "ILO_ALGORITHMIC_MANAGEMENT": {
+      "archived_path": "factual_sources_stage0/ILO_ALGORITHMIC_MANAGEMENT.bin",
+      "source_id": "ILO_ALGORITHMIC_MANAGEMENT",
+      "status": "dry_run",
+      "url": "https://www.ilo.org/algorithmic-management-workplace"
+    },
+    "MICROSOFT_AZURE_REGIONS": {
+      "archived_path": "factual_sources_stage0/MICROSOFT_AZURE_REGIONS.bin",
+      "source_id": "MICROSOFT_AZURE_REGIONS",
+      "status": "dry_run",
+      "url": "https://learn.microsoft.com/en-us/azure/reliability/regions-list"
+    },
+    "OECD_2024_ALGORITHMIC_MANAGEMENT_SURVEY": {
+      "archived_path": "factual_sources_stage0/OECD_2024_ALGORITHMIC_MANAGEMENT_SURVEY.pdf",
+      "source_id": "OECD_2024_ALGORITHMIC_MANAGEMENT_SURVEY",
+      "status": "dry_run",
+      "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/02/algorithmic-management-in-the-workplace_3c84ed6d/287c13c4-en.pdf"
+    },
+    "STANFORD_AI_INDEX_2025": {
+      "archived_path": "factual_sources_stage0/STANFORD_AI_INDEX_2025.pdf",
+      "source_id": "STANFORD_AI_INDEX_2025",
+      "status": "dry_run",
+      "url": "https://hai-production.s3.amazonaws.com/files/hai_ai_index_report_2025.pdf"
+    },
+    "SYNERGY_RESEARCH_2024_CLOUD": {
+      "archived_path": "factual_sources_stage0/SYNERGY_RESEARCH_2024_CLOUD.bin",
+      "source_id": "SYNERGY_RESEARCH_2024_CLOUD",
+      "status": "dry_run",
+      "url": "https://www.srgresearch.com/articles/cloud-market-jumped-to-330-billion-in-2024-genai-is-now-driving-half-of-the-growth"
+    },
+    "TRENDFORCE_Q3_2024_FOUNDRY": {
+      "archived_path": "factual_sources_stage0/TRENDFORCE_Q3_2024_FOUNDRY.html",
+      "source_id": "TRENDFORCE_Q3_2024_FOUNDRY",
+      "status": "dry_run",
+      "url": "https://www.trendforce.com/presscenter/news/20241205-12398.html"
+    },
+    "US_CENSUS_ACS_2024_5YR_DP04": {
+      "archived_path": "factual_sources_stage0/US_CENSUS_ACS_2024_5YR_DP04.json",
+      "source_id": "US_CENSUS_ACS_2024_5YR_DP04",
+      "status": "dry_run",
+      "url": "https://api.census.gov/data/2024/acs/acs5/profile?get=NAME,DP04_0001E,DP04_0002E,DP04_0003E&for=us:1"
+    },
+    "WORLD_BANK_CURRENT_ACCOUNT_GDP_GHA": {
+      "archived_path": "factual_sources_stage0/WORLD_BANK_CURRENT_ACCOUNT_GDP_GHA.json",
+      "source_id": "WORLD_BANK_CURRENT_ACCOUNT_GDP_GHA",
+      "status": "dry_run",
+      "url": "https://api.worldbank.org/v2/country/GHA/indicator/BN.CAB.XOKA.GD.ZS?format=json&per_page=20000"
+    },
+    "WORLD_BANK_FDI_NET_INFLOWS_GDP_GHA": {
+      "archived_path": "factual_sources_stage0/WORLD_BANK_FDI_NET_INFLOWS_GDP_GHA.json",
+      "source_id": "WORLD_BANK_FDI_NET_INFLOWS_GDP_GHA",
+      "status": "dry_run",
+      "url": "https://api.worldbank.org/v2/country/GHA/indicator/BX.KLT.DINV.WD.GD.ZS?format=json&per_page=20000"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.env
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+
+# Benchmark execution outputs are immutable artifacts, stored outside ordinary Git.
+stage0_runs/
+runs/
+artifacts/runs/
+*.sqlite
+*.duckdb
+*.db
+*.log
+
+# Large source packets and model artifacts.
+data/raw/
+stage0/factual_sources_stage0/
+*.safetensors
+*.gguf
+*.bin

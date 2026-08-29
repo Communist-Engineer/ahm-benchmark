@@ -1,0 +1,603 @@
+{
+  "FT-AI-ACC-01": {
+    "acceptable_values_or_range": {
+      "compensation_of_employees_percent_gdi": {
+        "expected_value": 51.9,
+        "tolerance": "±0.2 percentage points",
+        "year": 2024
+      },
+      "employed_thousands": {
+        "expected_value": 161346,
+        "tolerance": "±50 thousand or same rounded value",
+        "year": 2024
+      },
+      "inference_boundary": "employment, wage-share, and demand accounting context; causal AI-displacement claims require separate causal estimates",
+      "personal_consumption_expenditures_percent_gdp": {
+        "expected_value": 67.9,
+        "tolerance": "±0.2 percentage points",
+        "year": 2024
+      },
+      "unemployment_rate_percent": {
+        "expected_value": 4.0,
+        "tolerance": "±0.1 percentage points",
+        "year": 2024
+      }
+    },
+    "completion_todos": [
+      "Archive BLS table and FRED CSV exports and add source-level SHA-256 hashes before final preregistration."
+    ],
+    "factual_target_id": "FT-AI-ACC-01",
+    "factual_target_version_id": "a5026857-297c-5555-9da5-20430f83531a",
+    "jurisdiction": "United States",
+    "known_limitations": "The packet supports descriptive labor-market and national-account magnitudes. It does not establish that AI caused payroll reduction, wage-share change, or demand weakness in 2024.",
+    "packet_sha256": "cb36408bbd70ebb8eff1ad3706df498ea37e7e942873a889a9bcb8b0d1056895",
+    "packet_status": "complete",
+    "packet_version": "stage0-source-backed-0.2.0",
+    "permitted_inference": "descriptive",
+    "proposition": "For the United States in 2024, employment, wage-share, and demand context must distinguish accounting from causal claims: BLS annual averages report 161.346 million employed people and a 4.0 percent unemployment rate, while BEA/FRED reports personal consumption expenditures at 67.9 percent of GDP and compensation of employees at 51.9 percent of GDI.",
+    "source_excerpt_or_slice": [
+      {
+        "fields": {
+          "civilian_labor_force_thousands": 168106,
+          "employed_thousands": 161346,
+          "employment_population_ratio_percent": 60.1,
+          "unemployed_thousands": 6761,
+          "unemployment_rate_percent": 4.0
+        },
+        "slice_type": "labor_force_values",
+        "source_id": "BLS_CPS_ANNUAL_AVERAGES_2024_TABLE_1"
+      },
+      {
+        "date": "2024-01-01",
+        "series": "Personal Consumption Expenditures as a share of Gross Domestic Product",
+        "slice_type": "time_series_value",
+        "source_id": "FRED_DPCERE1Q156NBEA_2024",
+        "unit": "percent",
+        "value": 67.9
+      },
+      {
+        "date": "2024-01-01",
+        "series": "Compensation of Employees, Paid: Wage and Salary Accruals as a share of Gross Domestic Income",
+        "slice_type": "time_series_value",
+        "source_id": "FRED_W270RE1A156NBEA_2024",
+        "unit": "percent",
+        "value": 51.9
+      }
+    ],
+    "source_identifier": "BLS Current Population Survey annual averages 2024; FRED/BEA annual national accounts 2024",
+    "source_retrieval_date": "2026-07-02",
+    "sources": [
+      {
+        "publisher": "U.S. Bureau of Labor Statistics",
+        "retrieved_at": "2026-07-02",
+        "source_id": "BLS_CPS_ANNUAL_AVERAGES_TABLE_1_2024",
+        "source_role": "primary",
+        "title": "Employment status of the civilian noninstitutional population, 1944 to date"
+      },
+      {
+        "download_error": "curl failed rc=28 url='https://fred.stlouisfed.org/graph/fredgraph.csv?id=DPCERE1Q156NBEA' stderr='curl: (28) Operation timed out after 25013 milliseconds with 0 bytes received'",
+        "publisher": "Federal Reserve Bank of St. Louis / U.S. Bureau of Economic Analysis",
+        "retrieved_at": "2026-07-02",
+        "source_id": "FRED_DPCERE1Q156NBEA",
+        "source_role": "primary",
+        "title": "Personal Consumption Expenditures as a share of Gross Domestic Product"
+      },
+      {
+        "publisher": "Federal Reserve Bank of St. Louis / U.S. Bureau of Economic Analysis",
+        "retrieved_at": "2026-07-02",
+        "source_id": "FRED_W270RE1A156NBEA",
+        "source_role": "primary",
+        "title": "Compensation of Employees, Paid: Wage and Salary Accruals as a share of Gross Domestic Income"
+      }
+    ],
+    "target_version": "0.5.0-source-backed-stage0",
+    "temporal_scope": "United States, annual 2024 labor-force and national-accounts observations"
+  },
+  "FT-AI-COMPUTE-01": {
+    "acceptable_values_or_range": {
+      "industry_share_notable_models_2024": {
+        "acceptable_numeric_range_percent": [
+          85,
+          92
+        ],
+        "expected_phrase": "nearly 90 percent"
+      },
+      "notable_models_china_2024": {
+        "expected_value": 15,
+        "tolerance": "exact or same rounded statement"
+      },
+      "notable_models_europe_2024": {
+        "expected_value": 3,
+        "tolerance": "exact or same rounded statement"
+      },
+      "notable_models_us_2024": {
+        "expected_value": 40,
+        "tolerance": "exact or same rounded statement"
+      },
+      "top_three_cloud_provider_share_2024": {
+        "acceptable_numeric_range_percent": [
+          64,
+          66
+        ]
+      }
+    },
+    "completion_todos": [
+      "Archive Stanford AI Index report/table and Synergy market-share release snapshots and add source-level SHA-256 hashes before final preregistration."
+    ],
+    "factual_target_id": "FT-AI-COMPUTE-01",
+    "factual_target_version_id": "56620dad-a3ab-5fd9-be51-c6b5f9a187cb",
+    "jurisdiction": "Global, with country/model-origin categories reported by Stanford AI Index",
+    "known_limitations": "The packet supports concentration claims for notable model production and cloud infrastructure market share. It does not directly measure ownership of all chips, all data centers, or all model weights, and it supports concentration rather than a full causal monopoly account.",
+    "packet_sha256": "cc6f2eeac8e930e7425e904a19b43a3b9a66935ea5d99fd7a1bab1ae80d52520",
+    "packet_status": "complete",
+    "packet_version": "stage0-source-backed-0.2.0",
+    "permitted_inference": "descriptive",
+    "proposition": "Frontier AI production and cloud infrastructure were highly concentrated in 2024: the Stanford AI Index reports that nearly 90 percent of notable AI models in 2024 came from industry and that the United States produced 40 notable models versus 15 from China and 3 from Europe; Synergy Research reports the top three cloud providers held roughly two-thirds of cloud infrastructure market share during 2024 snapshots.",
+    "source_excerpt_or_slice": [
+      {
+        "fields": {
+          "industry_share_of_notable_models_2024": "nearly 90 percent",
+          "notable_ai_models_china_2024": 15,
+          "notable_ai_models_europe_2024": 3,
+          "notable_ai_models_us_2024": 40
+        },
+        "slice_type": "report_values",
+        "source_id": "STANFORD_AI_INDEX_2025_NOTABLE_MODELS_2024"
+      },
+      {
+        "fields": {
+          "top_three_cloud_provider_share_q1_2024": "about 66 percent",
+          "top_three_cloud_provider_share_q4_2024": "about 64 percent"
+        },
+        "slice_type": "market_snapshot",
+        "source_id": "SYNERGY_CLOUD_MARKET_2024"
+      }
+    ],
+    "source_identifier": "Stanford AI Index 2025; Synergy Research Group 2024 cloud infrastructure market-share snapshots",
+    "source_retrieval_date": "2026-07-02",
+    "sources": [
+      {
+        "publisher": "Stanford Institute for Human-Centered Artificial Intelligence",
+        "retrieved_at": "2026-07-02",
+        "source_id": "STANFORD_AI_INDEX_2025",
+        "source_role": "primary",
+        "title": "Artificial Intelligence Index Report 2025"
+      },
+      {
+        "publisher": "Synergy Research Group",
+        "retrieved_at": "2026-07-02",
+        "source_id": "SYNERGY_RESEARCH_2024_CLOUD",
+        "source_role": "primary",
+        "title": "Cloud infrastructure market share snapshots, 2024"
+      }
+    ],
+    "target_version": "0.5.0-source-backed-stage0",
+    "temporal_scope": "Global AI and cloud infrastructure, 2024 snapshots reported in 2025 or 2024 sources"
+  },
+  "FT-AI-GEO-01": {
+    "acceptable_values_or_range": {
+      "advanced_node_firms": {
+        "expected_values": [
+          "TSMC",
+          "Samsung",
+          "Intel"
+        ],
+        "scope": "firms advancing sub-7nm process nodes per cited market source"
+      },
+      "bis_december_2024_controls": {
+        "date": "2024-12-02",
+        "required_elements_any": [
+          "advanced semiconductor manufacturing equipment controls",
+          "high-bandwidth memory controls",
+          "Entity List additions"
+        ]
+      },
+      "cloud_region_claims": {
+        "azure_regions_global": "over 70",
+        "google_active_countries": 11,
+        "google_active_locations": 30
+      },
+      "tsmc_foundry_share_q3_2024_percent": {
+        "expected_value": 64.9,
+        "tolerance": "±1.0 percentage point or same rounded value"
+      }
+    },
+    "completion_todos": [
+      "Archive BIS, TrendForce, Azure, and Google source snapshots and add source-level SHA-256 hashes before final preregistration."
+    ],
+    "factual_target_id": "FT-AI-GEO-01",
+    "factual_target_version_id": "80a47599-e4d5-57e4-9b8e-03abfb106fca",
+    "jurisdiction": "Global; United States export-control jurisdiction; country-specific claims only where source states them",
+    "known_limitations": "The packet supports descriptive claims about export-control scope, foundry concentration, and cloud-region geography. It does not by itself prove imperial causality or sovereign dependency without additional causal evidence and country-specific exposure measures.",
+    "packet_sha256": "998f863f9ee29689ae00b13558667d8f9fc29c4ff1b39d2418a6c09517017067",
+    "packet_status": "complete",
+    "packet_version": "stage0-source-backed-0.2.0",
+    "permitted_inference": "descriptive",
+    "proposition": "AI geopolitical centralization claims are supportable for late 2024 when bounded to export controls, advanced foundry concentration, and cloud-region geography: BIS expanded semiconductor and related controls in December 2024, TSMC held about 64.9 percent of the global foundry market in Q3 2024 while only TSMC, Samsung, and Intel were advancing sub-7nm nodes, and major cloud providers report globally distributed but provider-controlled regions.",
+    "source_excerpt_or_slice": [
+      {
+        "fields": {
+          "controls": [
+            "24 types of semiconductor manufacturing equipment",
+            "3 software tools",
+            "high-bandwidth memory controls",
+            "red-flag guidance",
+            "140 Entity List additions and 14 modifications"
+          ],
+          "date": "2024-12-02"
+        },
+        "slice_type": "policy_snapshot",
+        "source_id": "BIS_SEMICONDUCTOR_CONTROLS_DEC_2024"
+      },
+      {
+        "fields": {
+          "advanced_node_note": "only TSMC, Samsung, and Intel were advancing sub-7nm process nodes",
+          "samsung_market_share_q3_2024_percent": 9.3,
+          "tsmc_market_share_q3_2024_percent": 64.9
+        },
+        "slice_type": "market_snapshot",
+        "source_id": "TRENDFORCE_FOUNDRY_Q3_2024"
+      },
+      {
+        "fields": {
+          "azure_regions_global": "over 70 regions globally",
+          "data_residency_boundary": "each geography is a data residency boundary"
+        },
+        "slice_type": "cloud_region_statement",
+        "source_id": "MICROSOFT_AZURE_REGIONS_OVERVIEW"
+      },
+      {
+        "fields": {
+          "google_active_countries": 11,
+          "google_active_locations": 30
+        },
+        "slice_type": "cloud_infrastructure_statement",
+        "source_id": "GOOGLE_DATA_CENTER_LOCATIONS"
+      }
+    ],
+    "source_identifier": "BIS December 2024 semiconductor controls; TrendForce Q3 2024 foundry market share; Microsoft Azure regions; Google data center locations",
+    "source_retrieval_date": "2026-07-02",
+    "sources": [
+      {
+        "publisher": "U.S. Bureau of Industry and Security",
+        "retrieved_at": "2026-07-02",
+        "source_id": "BIS_DEC_2024_SEMICONDUCTOR_CONTROLS",
+        "source_role": "primary",
+        "title": "Commerce strengthens export controls to restrict China's capability to produce advanced semiconductors for military applications"
+      },
+      {
+        "publisher": "TrendForce",
+        "retrieved_at": "2026-07-02",
+        "source_id": "TRENDFORCE_Q3_2024_FOUNDRY",
+        "source_role": "primary",
+        "title": "Q3 2024 foundry market-share and advanced-node snapshot"
+      },
+      {
+        "publisher": "Microsoft",
+        "retrieved_at": "2026-07-02",
+        "source_id": "MICROSOFT_AZURE_REGIONS",
+        "source_role": "corroborating",
+        "title": "Azure regions and availability zones"
+      },
+      {
+        "publisher": "Google",
+        "retrieved_at": "2026-07-02",
+        "source_id": "GOOGLE_DATA_CENTER_LOCATIONS",
+        "source_role": "corroborating",
+        "title": "Google data center locations"
+      }
+    ],
+    "target_version": "0.5.0-source-backed-stage0",
+    "temporal_scope": "Global semiconductor and cloud infrastructure snapshots, chiefly Q3-Q4 2024; cloud provider pages retrieved 2026-07-02"
+  },
+  "FT-AI-LAB-01": {
+    "acceptable_values_or_range": {
+      "acceptable_claim_types": [
+        "describes algorithmic management as workplace assignment, monitoring, supervision, evaluation, planning, command, coordination, or control",
+        "attributes empirical survey evidence only to the OECD employer-survey population and countries"
+      ],
+      "field_period": "June-August 2024",
+      "study_countries": [
+        "France",
+        "Germany",
+        "Italy",
+        "Japan",
+        "Spain",
+        "United States"
+      ],
+      "study_population": "over 6,000 mid-level managers"
+    },
+    "completion_todos": [
+      "Archive OECD report/PDF and ILO/JRC pages and add source-level SHA-256 hashes before final preregistration."
+    ],
+    "factual_target_id": "FT-AI-LAB-01",
+    "factual_target_version_id": "8ce54e55-8148-52f5-9412-f535cdabb8fc",
+    "jurisdiction": "France, Germany, Italy, Japan, Spain, United States; broader definitional claims from ILO/EU JRC",
+    "known_limitations": "This packet supports definitional and study-scope checks. It does not establish prevalence among all workers, effects on wages, or causal impacts of algorithmic management without additional study-specific effect estimates.",
+    "packet_sha256": "122ecef49d3c4f5a062bdb43d95bc2f9656d53b30e538454cfc6abbc062e11a8",
+    "packet_status": "complete",
+    "packet_version": "stage0-source-backed-0.2.0",
+    "permitted_inference": "descriptive",
+    "proposition": "Algorithmic management and workplace surveillance claims must be tied to study population and design: OECD reported a 2024 employer survey of more than 6,000 mid-level managers across six countries on algorithmic management tools, while ILO and EU JRC define algorithmic management as using tracked data and digital tools to assign, monitor, supervise, evaluate, plan, command, coordinate, and control work.",
+    "source_excerpt_or_slice": [
+      {
+        "fields": {
+          "countries": [
+            "France",
+            "Germany",
+            "Italy",
+            "Japan",
+            "Spain",
+            "United States"
+          ],
+          "field_period": "June-August 2024",
+          "respondents": "over 6,000 mid-level managers",
+          "topic": "algorithmic management tools used to manage workers"
+        },
+        "slice_type": "study_design",
+        "source_id": "OECD_ALGORITHMIC_MANAGEMENT_EMPLOYER_SURVEY_2024"
+      },
+      {
+        "fields": {
+          "definition": "algorithmic management systems use tracked data to organize, assign, monitor, supervise, and evaluate work"
+        },
+        "slice_type": "definition",
+        "source_id": "ILO_ALGORITHMIC_MANAGEMENT_DEFINITION"
+      },
+      {
+        "fields": {
+          "definition": "digital tools enable monitoring/surveillance and algorithms are used in planning, organisation, command, coordination, and control"
+        },
+        "slice_type": "definition",
+        "source_id": "EU_JRC_ALGORITHMIC_MANAGEMENT_DEFINITION"
+      }
+    ],
+    "source_identifier": "OECD 2024 employer survey; ILO algorithmic management description; EU JRC algorithmic management description",
+    "source_retrieval_date": "2026-07-02",
+    "sources": [
+      {
+        "publisher": "OECD",
+        "retrieved_at": "2026-07-02",
+        "source_id": "OECD_2024_ALGORITHMIC_MANAGEMENT_SURVEY",
+        "source_role": "primary",
+        "title": "Algorithmic management in the workplace: New evidence from an OECD employer survey"
+      },
+      {
+        "publisher": "International Labour Organization",
+        "retrieved_at": "2026-07-02",
+        "source_id": "ILO_ALGORITHMIC_MANAGEMENT",
+        "source_role": "corroborating",
+        "title": "Algorithmic management in the workplace"
+      },
+      {
+        "publisher": "European Commission Joint Research Centre",
+        "retrieved_at": "2026-07-02",
+        "source_id": "EU_JRC_ALGORITHMIC_MANAGEMENT",
+        "source_role": "corroborating",
+        "title": "Algorithmic management and digital monitoring in workplaces"
+      }
+    ],
+    "target_version": "0.5.0-source-backed-stage0",
+    "temporal_scope": "OECD survey period June-August 2024; definitional sources current as retrieved"
+  },
+  "FT-AUTO-02": {
+    "acceptable_values_or_range": {
+      "compensation_of_employees_percent_gdi": {
+        "expected_value": 51.9,
+        "tolerance": "±0.2 percentage points or same rounded value",
+        "year": 2024
+      },
+      "inference_boundary": "supports labor-income/consumption-share accounting context; automation-demand causal claims require qualified language",
+      "personal_consumption_expenditures_percent_gdp": {
+        "expected_value": 67.9,
+        "tolerance": "±0.2 percentage points or same rounded value",
+        "year": 2024
+      }
+    },
+    "completion_todos": [
+      "Archive CSV exports for both FRED series and add source-level SHA-256 hashes before final preregistration."
+    ],
+    "factual_target_id": "FT-AUTO-02",
+    "factual_target_version_id": "f40e7bf4-40f1-5f95-90e2-81771551fded",
+    "jurisdiction": "United States",
+    "known_limitations": "The packet supports accounting magnitudes for consumption share and compensation share. It does not establish that a specific automation shock caused weak demand or excess capacity.",
+    "packet_sha256": "3088247c48ba404645346fdbf420e323ba947ed974a934574ba7d40dcdbb93ce",
+    "packet_status": "complete",
+    "packet_version": "stage0-source-backed-0.2.0",
+    "permitted_inference": "descriptive",
+    "proposition": "For the United States in 2024, national accounts show household consumption remained a large share of GDP and employee compensation remained a large share of gross domestic income: BEA/FRED reports personal consumption expenditures at 67.9 percent of GDP and compensation of employees at 51.9 percent of GDI.",
+    "source_excerpt_or_slice": [
+      {
+        "date": "2024-01-01",
+        "frequency": "annual",
+        "series": "Personal Consumption Expenditures as a share of Gross Domestic Product",
+        "slice_type": "time_series_value",
+        "source_id": "FRED_DPCERE1Q156NBEA_2024",
+        "unit": "percent",
+        "value": 67.9
+      },
+      {
+        "date": "2024-01-01",
+        "frequency": "annual",
+        "series": "Compensation of Employees, Paid: Wage and Salary Accruals as a share of Gross Domestic Income",
+        "slice_type": "time_series_value",
+        "source_id": "FRED_W270RE1A156NBEA_2024",
+        "unit": "percent",
+        "value": 51.9
+      }
+    ],
+    "source_identifier": "FRED/BEA series DPCERE1Q156NBEA and W270RE1A156NBEA, annual 2024 observations",
+    "source_retrieval_date": "2026-07-02",
+    "sources": [
+      {
+        "download_error": "curl failed rc=28 url='https://fred.stlouisfed.org/graph/fredgraph.csv?id=DPCERE1Q156NBEA' stderr='curl: (28) Operation timed out after 25013 milliseconds with 0 bytes received'",
+        "publisher": "Federal Reserve Bank of St. Louis / U.S. Bureau of Economic Analysis",
+        "retrieved_at": "2026-07-02",
+        "source_id": "FRED_DPCERE1Q156NBEA",
+        "source_role": "primary",
+        "title": "Personal Consumption Expenditures as a share of Gross Domestic Product"
+      },
+      {
+        "publisher": "Federal Reserve Bank of St. Louis / U.S. Bureau of Economic Analysis",
+        "retrieved_at": "2026-07-02",
+        "source_id": "FRED_W270RE1A156NBEA",
+        "source_role": "primary",
+        "title": "Compensation of Employees, Paid: Wage and Salary Accruals as a share of Gross Domestic Income"
+      }
+    ],
+    "target_version": "0.5.0-source-backed-stage0",
+    "temporal_scope": "United States, annual 2024 BEA national accounts"
+  },
+  "FT-HOUS-01": {
+    "acceptable_values_or_range": {
+      "claim_direction": "coexistence supported when both vacancy count > 0 and homelessness count > 0 for the United States in 2024",
+      "people_experiencing_homelessness": {
+        "estimate": 771480,
+        "tolerance": "accept exact HUD AHAR national PIT estimate or rounded equivalent",
+        "unit": "persons"
+      },
+      "vacant_housing_units": {
+        "estimate": 14547859,
+        "tolerance": "accept estimate within ACS MOE ±200,366",
+        "unit": "housing units"
+      }
+    },
+    "completion_todos": [
+      "Archive local snapshots of the Census table and HUD PDF and add source-level SHA-256 hashes before final preregistration."
+    ],
+    "factual_target_id": "FT-HOUS-01",
+    "factual_target_version_id": "ed20bb34-54f6-58bf-8cd2-340653001c11",
+    "jurisdiction": "United States",
+    "known_limitations": "The ACS vacancy estimate and HUD PIT homelessness count measure different constructs, collection methods, and time windows. The packet supports coexistence and approximate national magnitudes only; it does not support a causal claim that vacant units directly caused or could directly house all people counted as homeless.",
+    "packet_sha256": "a539fb6a39f2c277c4c553e47d1e1bce4e6c568cf6bcc60293ebed5cd0e03949",
+    "packet_status": "complete",
+    "packet_version": "stage0-source-backed-0.2.0",
+    "permitted_inference": "descriptive",
+    "proposition": "Vacancy and homelessness coexisted in the United States in 2024: the Census/ACS-estimated vacant housing-unit count was in the tens of millions while HUD's 2024 point-in-time count recorded hundreds of thousands of people experiencing homelessness on a single night.",
+    "source_excerpt_or_slice": [
+      {
+        "fields": {
+          "occupied_housing_units": {
+            "estimate": 129227496,
+            "moe": 209365,
+            "unit": "housing units"
+          },
+          "total_housing_units": {
+            "estimate": 143775355,
+            "moe": 10234,
+            "unit": "housing units"
+          },
+          "vacant_housing_units": {
+            "estimate": 14547859,
+            "moe": 200366,
+            "unit": "housing units"
+          }
+        },
+        "slice_type": "table_values",
+        "source_id": "US_CENSUS_ACS_2024_5YR_DP04",
+        "table": "ACS 2024 5-year DP04, Selected Housing Characteristics"
+      },
+      {
+        "fields": {
+          "people_experiencing_homelessness_pit_2024": {
+            "estimate": 771480,
+            "unit": "persons"
+          },
+          "pit_count_window": "single night during the last 10 days of January 2024"
+        },
+        "slice_type": "report_values",
+        "source_id": "HUD_AHAR_2024_PART_1"
+      }
+    ],
+    "source_identifier": "US Census ACS 2024 5-year DP04; HUD 2024 AHAR Part 1",
+    "source_retrieval_date": "2026-07-02",
+    "sources": [
+      {
+        "publisher": "U.S. Census Bureau",
+        "retrieved_at": "2026-07-02",
+        "source_id": "US_CENSUS_ACS_2024_5YR_DP04",
+        "source_role": "primary",
+        "title": "ACS 2024 5-year DP04 Selected Housing Characteristics"
+      },
+      {
+        "publisher": "U.S. Department of Housing and Urban Development",
+        "retrieved_at": "2026-07-02",
+        "source_id": "HUD_AHAR_2024_PART_1",
+        "source_role": "primary",
+        "title": "The 2024 Annual Homelessness Assessment Report to Congress, Part 1"
+      }
+    ],
+    "target_version": "0.5.0-source-backed-stage0",
+    "temporal_scope": "United States, 2024 ACS 5-year housing estimates and January 2024 HUD PIT observation"
+  },
+  "FT-IMPER-01": {
+    "acceptable_values_or_range": {
+      "current_account_balance_percent_gdp": {
+        "country": "Ghana",
+        "expected_value": 2.029,
+        "tolerance": "±0.05 percentage points or same rounded value",
+        "year": 2024
+      },
+      "foreign_direct_investment_net_inflows_percent_gdp": {
+        "country": "Ghana",
+        "expected_value": 2.1317,
+        "tolerance": "±0.05 percentage points or same rounded value",
+        "year": 2024
+      },
+      "sign_convention": "positive values indicate net inflow or surplus in the cited indicator definition"
+    },
+    "completion_todos": [
+      "Replace data-mirror references with direct World Bank API extracts in the live repository if API access is available.",
+      "Archive exact indicator responses and add source-level SHA-256 hashes before final preregistration."
+    ],
+    "factual_target_id": "FT-IMPER-01",
+    "factual_target_version_id": "0ff8fc36-046d-5208-a471-3365c4c1d4c4",
+    "jurisdiction": "Ghana",
+    "known_limitations": "This packet supports descriptive checks of selected World Bank-linked macro-flow indicators only. It does not by itself prove unequal exchange, dependency, or imperial causation; those require additional operationalized datasets and causal design.",
+    "packet_sha256": "214dbeabb8da352f135820f8312cf6733f2a6b407f0d7e7027f43741a9a1c21a",
+    "packet_status": "complete",
+    "packet_version": "stage0-source-backed-0.2.0",
+    "permitted_inference": "descriptive",
+    "proposition": "For Ghana in 2024, externally linked macroeconomic flows were material and sign-sensitive: World Bank-linked series report FDI net inflows of 2.1317 percent of GDP and a current-account balance of about 2.029 percent of GDP, so factual assessment must preserve source series, country-year, and sign convention.",
+    "source_excerpt_or_slice": [
+      {
+        "country": "Ghana",
+        "indicator": "Foreign direct investment, net inflows (% of GDP)",
+        "slice_type": "indicator_value",
+        "source_id": "WORLD_BANK_BX_KLT_DINV_WD_GD_ZS_GHA_2024",
+        "unit": "percent of GDP",
+        "value": 2.1317,
+        "year": 2024
+      },
+      {
+        "country": "Ghana",
+        "indicator": "Current account balance (% of GDP)",
+        "slice_type": "indicator_value",
+        "source_id": "WORLD_BANK_BN_CAB_XOKA_GD_ZS_GHA_2024",
+        "unit": "percent of GDP",
+        "value": 2.029,
+        "year": 2024
+      }
+    ],
+    "source_identifier": "World Bank indicator series for Ghana, 2024, as surfaced by World Bank-linked data mirrors",
+    "source_retrieval_date": "2026-07-02",
+    "sources": [
+      {
+        "publisher": "World Bank indicator series",
+        "retrieved_at": "2026-07-02",
+        "source_id": "WORLD_BANK_FDI_NET_INFLOWS_GDP_GHA",
+        "source_role": "primary",
+        "title": "Foreign direct investment, net inflows (% of GDP) - Ghana"
+      },
+      {
+        "publisher": "World Bank indicator series",
+        "retrieved_at": "2026-07-02",
+        "source_id": "WORLD_BANK_CURRENT_ACCOUNT_GDP_GHA",
+        "source_role": "primary",
+        "title": "Current account balance (% of GDP) - Ghana"
+      }
+    ],
+    "target_version": "0.5.0-source-backed-stage0",
+    "temporal_scope": "Ghana, calendar year 2024 or World Bank reporting year 2024"
+  }
+}

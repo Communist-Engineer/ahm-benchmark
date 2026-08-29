@@ -1,0 +1,26 @@
+{
+  "backend": "curl",
+  "completed_count": 0,
+  "connect_timeout": 8.0,
+  "created_at_utc": "2026-07-03T04:38:05.391170+00:00",
+  "dry_run": false,
+  "elapsed_seconds": 24.017,
+  "failure_count": 1,
+  "force": false,
+  "input": "factual_targets.stage0.source_backed.json",
+  "known_warning_count": 0,
+  "retries": 1,
+  "source_count": 1,
+  "source_dir": "factual_sources_stage0",
+  "sources": {
+    "FRED_DPCERE1Q156NBEA": {
+      "archived_path": "factual_sources_stage0/FRED_DPCERE1Q156NBEA.csv",
+      "error": "curl failed rc=28 url='https://fred.stlouisfed.org/graph/fredgraph.csv?id=DPCERE1Q156NBEA' stderr='curl: (28) Operation timed out after 25013 milliseconds with 0 bytes received'",
+      "retrieved_at_utc": "2026-07-03T04:38:05.390705+00:00",
+      "source_id": "FRED_DPCERE1Q156NBEA",
+      "status": "error",
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DPCERE1Q156NBEA"
+    }
+  },
+  "timeout": 25.0
+}
