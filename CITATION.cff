@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use the AHM Benchmark, cite this repository and the specification version used."
+title: "Automated Historical-Materialist Benchmark"
+type: software
+authors:
+  - family-names: "Dartt"
+    given-names: "Aaron"
+repository-code: "https://github.com/Aaron-Dartt-KU/ahm-benchmark"
+url: "https://github.com/Aaron-Dartt-KU/ahm-benchmark"
+license: Apache-2.0
+version: 0.1.0
+date-released: 2026-08-29
+keywords:
+  - large language models
+  - political economy
+  - historical materialism
+  - benchmark
+  - model evaluation

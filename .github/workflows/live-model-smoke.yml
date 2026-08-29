@@ -1,0 +1,45 @@
+name: Explicit live model smoke
+
+on:
+  workflow_dispatch:
+    inputs:
+      workers:
+        description: "Concurrent judge requests"
+        required: true
+        default: "1"
+        type: choice
+        options: ["1", "2", "4"]
+
+permissions:
+  contents: read
+
+jobs:
+  selene-smoke:
+    runs-on: [self-hosted, ahm-judge]
+    timeout-minutes: 120
+    env:
+      AHM_JUDGE_BASE_URL: ${{ secrets.AHM_JUDGE_BASE_URL }}
+      OPENAI_API_KEY: ${{ secrets.AHM_JUDGE_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: python -m pip install -e .
+      - name: Run one bounded request
+        run: >-
+          python stage0/run_stage0_judge.py
+          --input tests/fixtures/stage0/monolithic/no_target.requests.jsonl
+          --output artifacts/runs/live-smoke.jsonl
+          --model local-judge-selene-70b-bf16
+          --workers ${{ inputs.workers }}
+          --limit 1 --timeout 5400 --resume
+      - name: Validate
+        run: >-
+          python stage0/validate_stage0_judge_outputs_v7.py
+          --outputs artifacts/runs/live-smoke.jsonl
+          --requests tests/fixtures/stage0/monolithic/no_target.requests.jsonl
+          --strict-failed-rows --min-model-response-chars 100
+          --min-true-claims 3 --min-evidence-spans 3
+          --min-nonabsent-relations 1 --require-feature-specific-evidence
