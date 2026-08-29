@@ -10,7 +10,8 @@
 - Destination: `https://github.com/Aaron-Dartt-KU/ahm-benchmark`
 - Preserved destination parent: `910c2e88e4bd5c7ac279285ba5769702e268a8a6` (`Initial commit`)
 - Strategy: preserve the intentional destination initial commit, import the recovered source as classified files, then add specification, deterministic reference code, tests, documentation, CI, and reproducibility controls through coherent migration commits
-- Resulting destination commit: `RESULTING_DESTINATION_COMMIT`
+- Resulting repository-foundation commit: `d1d2832c00d451db3e0436875047087d5ba923cf`
+- Final attestation commit: the current `main` commit containing this report; the final engineering response records its resolved SHA because a commit cannot contain its own hash
 
 The original working copy and recovered archive remain intact. The migration creates a canonical repository history because the source snapshot contains no Git metadata.
 
@@ -94,7 +95,7 @@ The source snapshot has no Git history, so the history scan covers the destinati
 - YAML/CFF parse: 5 files passed.
 - Candidate-tree secret and internal-endpoint scan: no publishable finding.
 - `git diff --check`: passed.
-- Clean-clone verification: `CLEAN_CLONE_RESULTS`.
+- Clean-clone verification at `d1d2832c00d451db3e0436875047087d5ba923cf`: anonymous clone passed; editable install passed; package import reported `0.1.0`; specification hash passed; Ruff passed; 20 tests passed in 0.92 seconds; `compileall`, dependency integrity, required-file, README-link, YAML/CFF, and source-path checks passed; Git status remained clean after setup and tests.
 
 ## Scientific and implementation gaps
 
