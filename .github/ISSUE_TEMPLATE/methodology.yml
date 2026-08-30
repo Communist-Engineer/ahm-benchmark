@@ -1,0 +1,31 @@
+name: Methodology change
+description: Instrument, ontology, opportunity, scoring, or inference-language work
+title: "[Methodology] "
+labels: ["methodology"]
+body:
+  - type: textarea
+    id: contradiction
+    attributes:
+      label: Scientific problem or contradiction
+      description: Identify the construct, evidence, or inference problem.
+    validations:
+      required: true
+  - type: input
+    id: sections
+    attributes:
+      label: Specification sections
+      placeholder: "§2.2, §5.2, §9.1"
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence and proposed resolution
+    validations:
+      required: true
+  - type: textarea
+    id: falsification
+    attributes:
+      label: Validation and falsification criteria
+    validations:
+      required: true

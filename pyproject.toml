@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ahm-benchmark"
+version = "0.1.0"
+description = "Automated, reproducible benchmark for multi-ontology political-economy framing in LLMs"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "Apache-2.0"}
+authors = [{name = "Aaron Dartt"}]
+keywords = ["benchmark", "llm", "political-economy", "historical-materialism", "evaluation"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+]
+dependencies = ["numpy>=2.0,<3", "pandas>=2.2,<3"]
+
+[project.optional-dependencies]
+analysis = ["duckdb>=1.2,<2"]
+dev = ["pytest>=8.3,<9", "ruff>=0.11,<1"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+testpaths = ["tests"]
+pythonpath = ["src"]
+markers = [
+  "integration: offline multi-file or engine integration checks",
+  "live: explicit external-model tests excluded from ordinary CI",
+]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+exclude = ["stage0/archive"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]
+ignore = ["E501"]

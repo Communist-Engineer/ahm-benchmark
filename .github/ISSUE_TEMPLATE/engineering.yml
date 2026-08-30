@@ -1,0 +1,32 @@
+name: Engineering change
+description: Runner, validator, database, packaging, CI, or reproducibility work
+title: "[Engineering] "
+labels: ["engineering"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: State the observable failure or missing capability.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope and affected paths
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: Acceptance and validation
+      description: List offline tests, fixtures, or live evidence required.
+    validations:
+      required: true
+  - type: checkboxes
+    id: semantics
+    attributes:
+      label: Scientific semantics
+      options:
+        - label: This change preserves scientific semantics.
+        - label: This change requires an explicit specification/version update.

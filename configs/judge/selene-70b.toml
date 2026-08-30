@@ -1,0 +1,15 @@
+[judge]
+model = "local-judge-selene-70b-bf16"
+base_url_env = "AHM_JUDGE_BASE_URL"
+observed_generation_tokens_per_second_per_request = 1.8
+max_concurrent_requests = 4
+temperature = 0.0
+top_p = 1.0
+timeout_seconds = 5400
+connect_timeout_seconds = 10
+retries = 0
+
+[deployment]
+model_family = "AtlaAI/Selene-1-Llama-3.3-70B"
+api_protocol = "openai-compatible"
+notes = "Observed Stage-0 deployment limits; operational rather than scientific constants."
